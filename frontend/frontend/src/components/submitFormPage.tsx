@@ -79,6 +79,7 @@ export default function RegisterForm() {
                 <Select
                     labelId="source-label"
                     name="source"
+                    label="Source"
                     required
                     value={formData.source}
                     onChange={handleSelectChange}
