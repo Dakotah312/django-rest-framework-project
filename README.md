@@ -40,7 +40,13 @@ uv sync
 cd /core
 ```
 
-5. Run the backend server:
+5. run migration
+
+```bash
+uv run manage.py migrate
+```
+
+6. Run the backend server:
 
 ```bash
 uv run python manage.py runserver
