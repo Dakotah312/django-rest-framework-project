@@ -26,7 +26,7 @@ cd /core
 uv run python manage.py runserver
 ```
 
-The backend will be available at `http://localhost:8000/`.
+The backend will be available at `http://localhost:8000/api/professionals/`.
 
 ---
 
