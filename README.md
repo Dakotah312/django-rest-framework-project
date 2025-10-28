@@ -1,5 +1,20 @@
 # django-rest-framework-project
 
+## Details
+### Estimated Time
+Backend: 2 hours
+Frontend: 5 hours
+
+Total: 7 hours
+
+### Possible improvments with more time
+
+If I were to spend more time I would add better error handling for input data that would surface to the user why the form submit might have failed. I would also make it so possible filtering was client side so there wouldnt need to fetch the data every time the filter changes if its already all in memory.
+
+### Assumptions & Trade offs
+
+I made it so each change to filters in the list page would make a new request to showcase the filter on the api but would have done some client side filtering. I used built in support since it would be whats used most likely and didnt need to recreate the wheel like the django filter and react-router-dom.
+
 ## Extentions
 
 ### How would the system process and interpret the content of the uploaded PDF?
@@ -22,34 +37,56 @@ A file download icon per user in the table view if you want to be able to downlo
 
 ### Backend
 
-1. Go to the backend folder:
+navigate to folder:
 
 ```bash
 cd backend
 ```
-
-2. install dependancies using uv:
+#### Using uv
 
 ```bash
 uv sync
 ```
 
-4. navigate into /core:
+navigate into /core:
 
 ```bash
 cd /core
 ```
 
-5. run migration
+run migration:
 
 ```bash
 uv run manage.py migrate
 ```
 
-6. Run the backend server:
+run the backend server:
 
 ```bash
 uv run python manage.py runserver
+```
+#### Using Pip
+
+```bash
+pip install .
+```
+
+navigate into /core:
+
+```bash
+cd /core
+```
+
+run migration:
+
+```bash
+python manage.py migrate
+```
+
+run the backend server:
+
+```bash
+python manage.py runserver
 ```
 
 The backend will be available at `http://localhost:8000/api/professionals/`.
